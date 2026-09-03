@@ -1,0 +1,12 @@
+# Typst 编译产物
+*.pdf
+*.svg
+*.png
+
+# 编辑器与系统文件
+.DS_Store
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
