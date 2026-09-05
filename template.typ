@@ -140,12 +140,7 @@
   body,
 )
 
-#let internship-report(
-  body,
-  include-notice: true,
-  include-outline: true,
-  outline-depth: 2,
-) = {
+#let internship-report(body) = {
   set page(
     width: 184.15mm,
     height: 260.10mm,
@@ -171,13 +166,9 @@
   show figure.caption: set text(size: 10.5pt)
   show figure.caption: set align(center)
 
-  if include-notice {
-    notice-page()
-    pagebreak()
-  }
-  if include-outline {
-    report-outline(depth: outline-depth)
-    pagebreak()
-  }
+  notice-page()
+  pagebreak()
+  report-outline(depth: 2)
+  pagebreak()
   body
 }

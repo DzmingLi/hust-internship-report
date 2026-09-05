@@ -1,11 +1,7 @@
 #import "template.typ": *
 
-// 正文默认含“使用注意事项/成绩评定页”和自动目录；不生成封面、封底。
-#show: internship-report.with(
-  include-notice: true,
-  include-outline: true,
-  outline-depth: 2,
-)
+// 固定包含“使用注意事项/成绩评定页”和二级自动目录；不生成封面、封底。
+#show: internship-report
 
 = 实习内容分析
 
