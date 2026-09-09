@@ -3,6 +3,10 @@
 *.svg
 *.png
 
+# Nix 构建链接
+/result
+/result-*
+
 # 编辑器与系统文件
 .DS_Store
 *~

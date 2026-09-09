@@ -1,0 +1,36 @@
+#+title: 华中科技大学生产（专业）实习报告 Typst 模板
+
+Typst能够方便地使版式和内容分离。
+
+这是对华中科技大学生产（专业）实习报告/日记 Word 版本的非官方 Typst 复刻。阅读该文档时，我们认定您对 Typst 有基础的了解。
+
+您可以直接打开notebook.typ 和 report.typ，根据注释指导填写相关内容。
+
+封面、封底用 200 克牛皮纸打印。
+
+* 使用Typix编译（推荐）
+
+如果你的电脑操作系统是Mac OS或者Linux，我们推荐您安装 Nix 并启用 flakes 后运行：
+
+#+begin_src sh
+nix build
+#+end_src
+
+该命令通过 [[https://github.com/loqusion/typix][Typix]] 自动帮你找齐所需字体，并在当前目录生成 =result= 软链接。PDF 文件位于 =result/= 中。
+
+* 普通编译
+如果您的电脑是 Windows 操作系统，您想直接使用Typst编译，请确保您的电脑上安装了：宋体、黑体、华文中宋、Times New Roman、微软雅黑、等线和创艺简行楷。
+
+运行以下命令可同时生成报告和笔记本的整本、封面、内页 PDF。除 Typst 外，需要 Poppler 提供的 =pdfinfo= 命令。
+
+#+begin_src sh
+./build.sh
+#+end_src
+
+也可运行 =./build.sh report= 或 =./build.sh notebook= 只生成其中一本。输出文件如下：
+
+| 内容 | 实习报告 | 实习笔记本 |
+|------+----------+------------|
+| 整本预览 | report.pdf | notebook.pdf |
+| 单页封面 | report-cover.pdf | notebook-cover.pdf |
+| 内页 | report-inner.pdf | notebook-inner.pdf |

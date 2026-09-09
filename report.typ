@@ -1,7 +1,21 @@
+
+#import "@preview/cuti:0.4.0": show-cn-fakebold
 #import "template.typ": *
 
-// 固定包含“使用注意事项/成绩评定页”和二级自动目录；不生成封面、封底。
-#show: internship-report
+#show: show-cn-fakebold
+
+// 封面信息：将 none 改为 [要填写的内容]。
+#show: internship-report.with(
+  department: none,
+  major-class: none,
+  student-name: none,
+  student-id: none,
+  instructor: none,
+  internship-organization: none,
+  // 起止日期使用 datetime，封面自动格式化；同时设为 none 可留空供手写。
+  start-date: datetime(year: 2026, month: 5, day: 26),
+  end-date: datetime(year: 2026, month: 7, day: 17),
+)
 
 = 实习内容分析
 
@@ -64,6 +78,5 @@
 // 并结合具体经历说明体会。
 
 = 意见、建议与展望
-
 // 在此结合实习安排、教学衔接、任务难度、指导方式、团队沟通和后续学习计划，
 // 提出意见、建议与展望。
