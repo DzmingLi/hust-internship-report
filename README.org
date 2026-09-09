@@ -17,7 +17,7 @@ nix build
 该命令通过 [[https://github.com/loqusion/typix][Typix]] 自动帮你找齐所需字体，并在当前目录生成 =result= 软链接。PDF 文件位于 =result/= 中。
 
 * 普通编译
-如果您的电脑是 Windows 操作系统，您想直接使用Typst编译，请确保您的电脑上安装了：宋体、黑体、华文中宋、Times New Roman、微软雅黑、等线和创艺简行楷。
+如果您的电脑是 Windows 操作系统，或您想直接使用Typst编译，请确保您的电脑上安装了：宋体、黑体、华文中宋、Times New Roman、微软雅黑、等线和创艺简行楷。
 
 运行以下命令可同时生成报告和笔记本的整本、封面、内页 PDF。除 Typst 外，需要 Poppler 提供的 =pdfinfo= 命令。
 
